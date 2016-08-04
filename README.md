@@ -16,6 +16,13 @@ Premium GeoCodes (Based on pricing)
   //Same as above except for construction
   $getcords = new GoogleGeoCoder('YOUR-GOOGLE-CLIENT-ID','YOUR-GOOGLE-CRYPTOKEY');
   
+Custom Parser
+  //Want to build your own parser for the JSON returned by Google. No Problem!
+  $getcords = new GoogleGeoCoder('YOUR-GOOGLE-CLIENT-KEY');
+  $requesturl = $getcords->createURL('201 North Charles Street, Baltimore, MD');
+  $google_return_array = $getcords->sendCurl($requesturl);
+  //Now you can run $google_return_array through a custom parser.
+  
 Status Codes
   //To get the reason for a status code call the getReason() method.
   100 = Accuracy not good enough. Means google found something but it could just be "somewhere in maryland"
@@ -23,17 +30,15 @@ Status Codes
   300 = Overy your query limit
   400 = Unknown
 
-Return Array
-(
-    [StreetNumber] => 201
-    [Street] => North Charles Street
-    [City] => Baltimore
-    [County] => Baltimore City
-    [State] => Maryland
-    [Zip] => 21201
-    [FullAddress] => Saint Paul Plaza, 201 N Charles St, Baltimore, MD 21201, USA
-    [Latitude] => 39.2913541
-    [Longitude] => -76.6146181
-    [Status] => 200
-    [Reason] => Success
-)
+Return Array:
+  [StreetNumber] => 201
+  [Street] => North Charles Street
+  [City] => Baltimore
+  [County] => Baltimore City
+  [State] => Maryland
+  [Zip] => 21201
+  [FullAddress] => Saint Paul Plaza, 201 N Charles St, Baltimore, MD 21201, USA
+  [Latitude] => 39.2913541
+  [Longitude] => -76.6146181
+  [Status] => 200
+  [Reason] => Success

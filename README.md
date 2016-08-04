@@ -11,7 +11,7 @@ For Google Documentation: https://developers.google.com/maps/documentation/
 ##Free GeoCodes (Limit 2500/day)
   <pre>
   $getcords = new GoogleGeoCoder('YOUR-GOOGLE-CLIENT-KEY');
-  $resultarray = $getcords->GeoCode('210 North Charles Street, Baltimore, MD');
+  $resultarray = $getcords->GeoCode('201 North Charles Street, Baltimore, MD');
   print_r($resultarray);
   </pre>
 

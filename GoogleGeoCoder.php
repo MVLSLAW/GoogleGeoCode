@@ -152,7 +152,7 @@ class GoogleGeoCoder{
 				$county = 'Baltimore City';
 			}
 		}
-		return (isset($county) ? $county : 'Unknown'); //If county isn't set return "unknown";
+		return (isset($county) ? trim($county) : 'Unknown'); //If county isn't set return "unknown";
 	}
 	function findAddressElement($address_components_array,$element){
 		//Cycle through the address elements to find the requested element ('street_number','route','locality','postal_code')
@@ -163,7 +163,7 @@ class GoogleGeoCoder{
 				$returnelement = $value['long_name'];
 			}
 		}
-		return (isset($returnelement) ? $returnelement : 'Unknown'); 
+		return (isset($returnelement) ? trim($returnelement) : 'Unknown'); 
 	}
 	function printArray($array){
 		echo "<pre>";
@@ -186,7 +186,7 @@ class GoogleGeoCoder{
 		return $this->finalarray['FullAddress'];
 	}
 	public function getCounty(){
-		return $this->finalarray['FormattedCounty'];
+		return $this->finalarray['County'];
 	}
 	public function getStreetNumber(){
 		return $this->finalarray['StreetNumber'];

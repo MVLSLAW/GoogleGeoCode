@@ -182,10 +182,26 @@ class GoogleGeoCoder{
 	public function getReason(){
 		return $this->finalarray['Reason'];
 	}
-	public function getFormattedAddress(){
-		return $this->finalarray['FormattedAddress'];
+	public function getFullAddress(){
+		return $this->finalarray['FullAddress'];
 	}
-	public function getFormattedCounty(){
+	public function getCounty(){
 		return $this->finalarray['FormattedCounty'];
 	}
+	public function getStreetNumber(){
+		return $this->finalarray['StreetNumber'];
+	}
+	public function getStreet(){
+		return $this->finalarray['Street'];
+	}
+	public function getCity(){
+		return $this->finalarray['City'];
+	}
+	public function getState(){
+		return $this->finalarray['State'];
+	}
+	public function getZip(){
+		return $this->finalarray['Zip'];
+	}
+	
 }

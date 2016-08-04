@@ -3,7 +3,7 @@
 * Google GeoCoder
 * @copyright  Copyright (c) 2016 Maryland Volunteer Lawyers Service
 * @version    Release: 1.0
-* @Author Matthew Stubneberg
+* @Author Matthew Stubenberg
 * @Last Updated August 4, 2016
 * 
 * This is designed to be used with Server Side Google GeoCode's API. It will work with either the free version or the premium version.

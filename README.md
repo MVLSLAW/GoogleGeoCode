@@ -30,12 +30,13 @@ For Google Documentation: https://developers.google.com/maps/documentation/
   </pre>
   
 ##Status Codes
-  To get the reason for a status code call the getReason() method.
+  To get the result or status of the google search use getStatus(). To get the reason for a status code call the getReason() method.
+  <pre>
   100 = Accuracy not good enough. Means google found something but it could just be "somewhere in maryland"
   200 = Address found and accuracy good enough.
   300 = Overy your query limit
   400 = Unknown
-
+  </pre>
 ##Specific get Functions
 If you don't want to parse through the return array you can get the return values individually.
 <pre>
